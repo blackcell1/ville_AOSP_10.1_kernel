@@ -123,4 +123,3 @@ csnappy_decompress_noheader(
 #endif
 
 #endif
-

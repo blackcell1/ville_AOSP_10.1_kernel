@@ -495,4 +495,3 @@ EXPORT_SYMBOL(csnappy_compress);
 MODULE_LICENSE("BSD");
 MODULE_DESCRIPTION("Snappy Compressor");
 #endif
-

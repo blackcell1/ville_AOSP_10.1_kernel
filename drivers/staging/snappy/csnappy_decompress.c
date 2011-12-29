@@ -319,4 +319,3 @@ EXPORT_SYMBOL(csnappy_decompress);
 MODULE_LICENSE("BSD");
 MODULE_DESCRIPTION("Snappy Decompressor");
 #endif
-

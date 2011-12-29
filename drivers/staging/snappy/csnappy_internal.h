@@ -81,4 +81,3 @@ enum {
 };
 
 #endif  /* CSNAPPY_INTERNAL_H_ */
-
