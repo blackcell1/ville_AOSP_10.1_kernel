@@ -3148,3 +3148,4 @@ module_exit(msm_otg_exit);
 
 MODULE_LICENSE("GPL v2");
 MODULE_DESCRIPTION("MSM USB transceiver driver");
+

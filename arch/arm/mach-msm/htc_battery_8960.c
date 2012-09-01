@@ -554,6 +554,9 @@ static void cable_status_notifier_func(enum usb_connect_type online)
 		break;
 	case CONNECT_TYPE_AC:
 		BATT_LOG("5V AC charger");
+#ifdef CONFIG_FORCE_FAST_CHARGE
+			current_charge_mode = CURRENT_CHARGE_MODE_AC;
+#endif
 		htc_charger_event_notify(HTC_CHARGER_EVENT_SRC_AC);
 		radio_set_cable_status(CHARGER_AC);
 		break;
@@ -564,6 +567,9 @@ static void cable_status_notifier_func(enum usb_connect_type online)
 		break;
 	case CONNECT_TYPE_UNKNOWN:
 		BATT_ERR("unknown cable");
+#ifdef CONFIG_FORCE_FAST_CHARGE
+			current_charge_mode = CURRENT_CHARGE_MODE_USB;
+#endif
 		htc_charger_event_notify(HTC_CHARGER_EVENT_SRC_USB);
 		break;
 	case CONNECT_TYPE_INTERNAL:
