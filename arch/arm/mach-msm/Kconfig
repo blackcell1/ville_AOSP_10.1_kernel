@@ -2373,6 +2373,9 @@ config MSM_MPDEC
       This enables kernel based multi core control.
 	(up/down hotplug based on load)
 
+<<<<<<< HEAD
+>>>>>>> 0c950f4... fixed screenoff panic from mpdec
+=======
 >>>>>>> 0c950f4... fixed screenoff panic from mpdec
 config AUDIO_USAGE_FOR_POWER_CONSUMPTION
 	bool "AUDIO_USAGE_FOR_POWER_CONSUMPTION"

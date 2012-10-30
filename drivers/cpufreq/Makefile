@@ -30,6 +30,9 @@ obj-$(CONFIG_CPU_FREQ_GOV_SMOOTHASS)	+= cpufreq_smoothass.o
 obj-$(CONFIG_CPU_FREQ_GOV_ASSWAX)	+= cpufreq_asswax.o
 obj-$(CONFIG_CPU_FREQ_GOV_BADASS)	+= cpufreq_badass.o
 bj-$(CONFIG_CPU_FREQ_GOV_HOTPLUG)	+= cpufreq_hotplug.o
+<<<<<<< HEAD
+>>>>>>> 0c950f4... fixed screenoff panic from mpdec
+=======
 >>>>>>> 0c950f4... fixed screenoff panic from mpdec
 
 # CPUfreq cross-arch helpers
