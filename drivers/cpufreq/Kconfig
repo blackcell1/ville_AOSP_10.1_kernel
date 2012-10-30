@@ -482,6 +482,12 @@ config VDD_USERSPACE
 	  'intellidemand' - A dynamic cpufreq governor for Low Latency Frequency 
 	  Transition capable processors
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+	  If in doubt, say N.
+	  
+>>>>>>> 0c950f4... fixed screenoff panic from mpdec
 =======
 
 	  If in doubt, say N.

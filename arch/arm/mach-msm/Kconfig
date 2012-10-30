@@ -2374,6 +2374,9 @@ config MSM_MPDEC
 	(up/down hotplug based on load)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 0c950f4... fixed screenoff panic from mpdec
+=======
 >>>>>>> 0c950f4... fixed screenoff panic from mpdec
 =======
 >>>>>>> 0c950f4... fixed screenoff panic from mpdec
