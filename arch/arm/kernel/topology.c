@@ -96,7 +96,6 @@ struct cputopo_arm cpu_topology[NR_CPUS];
  * no_hz_idle_balance   DAHC 
  */
 
-static DEFINE_PER_CPU(unsigned int, cpu_scale);
 
 /*
  * cpu topology mask management
@@ -184,14 +183,6 @@ static void set_cpufreq_scale(unsigned int cpuid, unsigned int freq)
 	smp_wmb();
 }
 
-static void set_power_scale(unsigned int cpu, unsigned int idx)
-{
-	cpu_power[cpu].id = idx;
-	cpu_power[cpu].power = table_config[idx];
-
-	set_cpufreq_scale(cpu, cpu_power[cpu].freq);
-}
-
 static int topo_cpufreq_transition(struct notifier_block *nb,
 	unsigned long state, void *data)
 {
@@ -253,15 +244,6 @@ static int init_cpu_power_scale(void)
 }
 
 core_initcall(init_cpu_power_scale);
-
-/*
- * Update the cpu power
- */
-
-unsigned long arch_scale_freq_power(struct sched_domain *sd, int cpu)
-{
-	return per_cpu(cpu_scale, cpu);
-}
 
 /*
  * sched_domain flag configuration

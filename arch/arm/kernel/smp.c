@@ -30,14 +30,10 @@
 #include <asm/cacheflush.h>
 #include <asm/cpu.h>
 #include <asm/cputype.h>
-<<<<<<< HEAD
 #include <asm/exception.h>
-#include <asm/topology.h>
-=======
 #ifdef CONFIG_ARM_CPU_TOPOLOGY
 #include <asm/topology.h>
 #endif
->>>>>>> cfb2208... Applying Linaro Topology drivers and latest patch found at http://patches.linaro.org/project/linux-arm-kernel/ - Thank you Vincent Guittot
 #include <asm/mmu_context.h>
 #include <asm/pgtable.h>
 #include <asm/pgalloc.h>
@@ -292,7 +288,7 @@ static void __cpuinit smp_store_cpu_info(unsigned int cpuid)
 	cpu_info->loops_per_jiffy = loops_per_jiffy;
 #ifdef CONFIG_ARM_CPU_TOPOLOGY
 	store_cpu_topology(cpuid);
-#endif	
+#endif
 }
 
 /*
@@ -707,3 +703,4 @@ int setup_profiling_timer(unsigned int multiplier)
 {
 	return -EINVAL;
 }
+
