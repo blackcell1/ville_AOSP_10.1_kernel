@@ -164,6 +164,7 @@ bad_syms=$$($(CROSS_COMPILE)nm $@ | sed -n 's/^.\{8\} [bc] \(.*\)/\1/p') && \
 # For __aeabi_llsl
 ashldi3 = $(obj)/ashldi3.o
 
+AFLAGS_ashldi3.o +=-Wa,-march=armv7-a$(plus_sec) 
 $(obj)/ashldi3.S: $(srctree)/arch/$(SRCARCH)/lib/ashldi3.S FORCE
 	$(call cmd,shipped)
 
