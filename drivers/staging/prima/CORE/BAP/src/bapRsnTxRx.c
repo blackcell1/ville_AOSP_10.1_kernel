@@ -203,8 +203,8 @@ static VOS_STATUS bapRsnTxFrame( v_PVOID_t pvosGCtx, vos_pkt_t *pPacket )
 VOS_STATUS bapRsnSendEapolFrame( v_PVOID_t pvosGCtx, tAniPacket *pAniPkt )
 {
     VOS_STATUS status;
-    vos_pkt_t *pPacket;
-    v_U8_t *pData, *pSrc;
+    vos_pkt_t *pPacket=0;
+    v_U8_t *pData=0, *pSrc=0;
     int pktLen = aniAsfPacketGetBytes( pAniPkt, &pSrc );
 
     if( pktLen <= 0 )

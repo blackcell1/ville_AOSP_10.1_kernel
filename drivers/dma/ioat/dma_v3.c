@@ -1257,3 +1257,4 @@ int __devinit ioat3_dma_probe(struct ioatdma_device *device, int dca)
 
 	return 0;
 }
+

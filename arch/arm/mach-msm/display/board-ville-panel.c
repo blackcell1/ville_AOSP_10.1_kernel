@@ -569,7 +569,7 @@ static void ville_set_backlight(struct msm_fb_data_type *mfd)
 
 	if (panel_type == PANEL_ID_VILLE_SAMSUNG_SG ||
 			panel_type == PANEL_ID_VILLE_SAMSUNG_SG_C2) {
-		mipi_dsi_mdp_busy_wait();
+		mipi_dsi_mdp_busy_wait(mfd);
 
 		mipi_dsi_cmds_tx(&ville_panel_tx_buf, samsung_cmd_backlight_cmds,
 				ARRAY_SIZE(samsung_cmd_backlight_cmds));
@@ -602,7 +602,7 @@ static int ville_samsung_acl_enable(int on, struct msm_fb_data_type *mfd)
 	if (mfd->panel_info.type == MIPI_CMD_PANEL) {
 		mdp4_dsi_cmd_dma_busy_wait(mfd);
 		mdp4_dsi_blt_dmap_busy_wait(mfd);
-		mipi_dsi_mdp_busy_wait();
+		mipi_dsi_mdp_busy_wait(mfd);
 	}
 
 	if (cur_autobkl_stat == 8 && !first_time) {
@@ -763,7 +763,6 @@ static int mipi_cmd_samsung_blue_qhd_pt_init(void)
 	pinfo.bl_max = 255;
 	pinfo.bl_min = 1;
 	pinfo.fb_num = 2;
-	pinfo.lcd.blt_ctrl = 1;
 	pinfo.clk_rate = 482000000;
 	pinfo.lcd.vsync_enable = TRUE;
 	pinfo.lcd.hw_vsync_mode = TRUE;

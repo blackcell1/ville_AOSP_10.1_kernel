@@ -268,3 +268,4 @@ int vhci_rx_loop(void *data)
 
 	return 0;
 }
+

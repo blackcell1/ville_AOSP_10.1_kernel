@@ -337,3 +337,4 @@ void usbip_event_add(struct usbip_device *ud, unsigned long event);
 int usbip_event_happened(struct usbip_device *ud);
 
 #endif /* __USBIP_COMMON_H */
+

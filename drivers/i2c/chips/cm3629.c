@@ -703,7 +703,7 @@ static void enable_ps_interrupt(char *ps_conf)
 static void sensor_irq_do_work(struct work_struct *work)
 {
 	struct cm3629_info *lpi = lp_info;
-	uint8_t cmd[3];
+	uint8_t cmd[3] = {0, 0, 0};
 	uint8_t add = 0;
 
 	/* Check ALS or PS */
@@ -2536,3 +2536,4 @@ module_exit(cm3629_exit);
 
 MODULE_DESCRIPTION("cm3629 Driver");
 MODULE_LICENSE("GPL");
+

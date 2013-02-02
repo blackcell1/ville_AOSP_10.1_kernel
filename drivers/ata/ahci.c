@@ -1296,3 +1296,4 @@ MODULE_VERSION(DRV_VERSION);
 
 module_init(ahci_init);
 module_exit(ahci_exit);
+
