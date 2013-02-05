@@ -1147,4 +1147,3 @@ int acpi_processor_power_exit(struct acpi_processor *pr,
 
 	return 0;
 }
-

@@ -2656,4 +2656,3 @@ void mt9v113_exit(void)
 MODULE_DESCRIPTION("Micron 0.3 MP YUV sensor driver");
 MODULE_LICENSE("GPL v2");
 
-

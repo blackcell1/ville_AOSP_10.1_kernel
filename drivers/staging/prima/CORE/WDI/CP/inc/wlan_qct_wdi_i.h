@@ -4927,4 +4927,3 @@ WDI_ProcessFeatureCapsExchangeRsp
 
 #endif /*WLAN_QCT_WDI_I_H*/
 
-

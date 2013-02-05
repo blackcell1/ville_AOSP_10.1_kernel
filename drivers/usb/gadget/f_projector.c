@@ -1291,4 +1291,3 @@ static int projector_ctrlrequest(struct usb_composite_dev *cdev,
 	return value;
 }
 #endif
-

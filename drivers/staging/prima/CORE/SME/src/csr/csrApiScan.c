@@ -6518,4 +6518,3 @@ tANI_BOOLEAN csrRoamIsValidChannel( tpAniSirGlobal pMac, tANI_U8 channel )
 
 
 
-

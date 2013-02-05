@@ -1372,4 +1372,3 @@ MODULE_PARM_DESC(xpc_disengage_timelimit, "Number of seconds to wait "
 module_param(xpc_kdebug_ignore, int, 0);
 MODULE_PARM_DESC(xpc_kdebug_ignore, "Should lack of heartbeat be ignored by "
 		 "other partitions when dropping into kdebug.");
-

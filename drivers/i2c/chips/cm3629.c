@@ -2536,4 +2536,3 @@ module_exit(cm3629_exit);
 
 MODULE_DESCRIPTION("cm3629 Driver");
 MODULE_LICENSE("GPL");
-

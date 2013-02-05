@@ -2665,9 +2665,7 @@ static int cgroup_create_dir(struct cgroup *cgrp, struct dentry *dentry,
 		dentry->d_fsdata = cgrp;
 		inc_nlink(parent->d_inode);
 		rcu_assign_pointer(cgrp->dentry, dentry);
-		dget(dentry);
 	}
-	dput(dentry);
 
 	return error;
 }
@@ -5278,4 +5276,3 @@ struct cgroup_subsys debug_subsys = {
 	.subsys_id = debug_subsys_id,
 };
 #endif /* CONFIG_CGROUP_DEBUG */
-

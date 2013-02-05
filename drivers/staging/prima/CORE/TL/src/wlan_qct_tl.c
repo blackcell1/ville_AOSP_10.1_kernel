@@ -10686,4 +10686,3 @@ void WLANTL_UpdateRssiBmps(v_PVOID_t pvosGCtx, v_U8_t staId, v_S7_t rssi)
     pTLCb->atlSTAClients[staId].rssiAvgBmps = rssi;
   }
 }
-

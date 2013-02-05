@@ -5867,4 +5867,3 @@ void csrDisconnectAllActiveSessions(tpAniSirGlobal pMac)
     }
 }
 #endif
-

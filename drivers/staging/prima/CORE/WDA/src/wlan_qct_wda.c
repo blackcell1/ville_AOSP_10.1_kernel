@@ -12788,4 +12788,3 @@ VOS_STATUS WDA_shutdown(v_PVOID_t pVosContext, wpt_boolean closeTransport)
 
    return status;
 }
-
