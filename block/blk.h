@@ -186,4 +186,9 @@ static inline int blk_do_io_stat(struct request *rq)
 	        (rq->cmd_flags & REQ_DISCARD));
 }
 
+
+
+struct io_cq *ioc_lookup_icq(struct io_context *ioc, struct request_queue *q);
+struct io_cq *ioc_create_icq(struct request_queue *q, gfp_t gfp_mask);
+
 #endif

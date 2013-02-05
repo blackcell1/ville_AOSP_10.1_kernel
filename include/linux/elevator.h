@@ -5,6 +5,8 @@
 
 #ifdef CONFIG_BLOCK
 
+struct io_cq;
+
 typedef int (elevator_merge_fn) (struct request_queue *, struct request **,
 				 struct bio *);
 
