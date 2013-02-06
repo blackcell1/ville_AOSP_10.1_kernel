@@ -333,7 +333,11 @@ static int mt9v113_i2c_check_bit(unsigned short saddr, unsigned short raddr,
 unsigned short bit, int check_state)
 {
 	int k;
+<<<<<<< HEAD
 	unsigned short check_value = 0;
+=======
+	unsigned short check_value = 0 ;
+>>>>>>> 0a3b2a9... o3 fix,s2w switch,gpu mem tweak
 	unsigned short check_bit;
 	check_bit = 0x0001 << bit;
 	for (k = 0; k < CHECK_STATE_TIME; k++) {/* retry 100 times */
@@ -550,7 +554,11 @@ static inline int suspend(void)
 static int mt9v113_reg_init(void)
 {
 	int rc = 0, k = 0;
+<<<<<<< HEAD
 	unsigned short check_value = 0;
+=======
+	unsigned short check_value = 0 ;
+>>>>>>> 0a3b2a9... o3 fix,s2w switch,gpu mem tweak
 	struct msm_camera_sensor_info *sinfo = mt9v113_pdev->dev.platform_data;
 
     /* Power Up Start */
