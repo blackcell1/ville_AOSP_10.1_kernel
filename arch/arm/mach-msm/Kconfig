@@ -2353,8 +2353,6 @@ config ACPU_MAX_FREQ
 	  If set to non-zero number, will search for this frequency in
           frequency table and set as maximum supported frequency if found.
 
-<<<<<<< HEAD
-=======
 config CMDLINE_OPTIONS
 	bool "Enable cmdline khz/gov/maxscroff command parsing"
 	default y
@@ -2368,18 +2366,11 @@ config CMDLINE_OPTIONS
 config MSM_MPDEC
         bool "Enable kernel based mpdecision"
    depends on MSM_SMP
-      default n
+      default y
        help
       This enables kernel based multi core control.
 	(up/down hotplug based on load)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0c950f4... fixed screenoff panic from mpdec
-=======
->>>>>>> 0c950f4... fixed screenoff panic from mpdec
-=======
->>>>>>> 0c950f4... fixed screenoff panic from mpdec
 config AUDIO_USAGE_FOR_POWER_CONSUMPTION
 	bool "AUDIO_USAGE_FOR_POWER_CONSUMPTION"
 	default n
@@ -2404,5 +2395,6 @@ config MSM_CPU_PWRCTL
 	  Droop detector mechanism can adversely affect krait plls during
 	  stand alone power collapse operation. Selecting this option
 	  ensures that they are always off.
+
 
 endif
