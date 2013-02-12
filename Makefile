@@ -1,7 +1,12 @@
 VERSION = 3
 PATCHLEVEL = 0
+<<<<<<< HEAD
 SUBLEVEL = 63
 EXTRAVERSION =.Bubba
+=======
+SUBLEVEL = 64
+EXTRAVERSION =
+>>>>>>> 455fbca... Linux 3.0.64
 NAME = Sneaky Weasel
 
 # *DOCUMENTATION*
