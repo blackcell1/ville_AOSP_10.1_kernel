@@ -101,7 +101,7 @@ static struct dsi_cmd_desc samsung_cmd_on_cmds[] = {
         {DTYPE_DCS_LWRITE, 1, 0, 0, 0,  sizeof(samsung_panel_width), samsung_panel_width},
         {DTYPE_DCS_LWRITE, 1, 0, 0, 0,  sizeof(samsung_panel_height), samsung_panel_height},
         {DTYPE_DCS_WRITE1, 1, 0, 0, 0,  sizeof(samsung_panel_vinit), samsung_panel_vinit},
-        {DTYPE_DCS_WRITE, 1, 0, 0, 0,   sizeof(display_on), display_on},
+        {DTYPE_DCS_WRITE, 1, 0, 0, 30,   sizeof(display_on), display_on},
 };
 
 static struct dsi_cmd_desc samsung_cmd_on_cmds_c2[] = {
@@ -132,7 +132,7 @@ static struct dsi_cmd_desc samsung_cmd_on_cmds_c2[] = {
         {DTYPE_DCS_LWRITE, 1, 0, 0, 0,  sizeof(samsung_panel_width), samsung_panel_width},
         {DTYPE_DCS_LWRITE, 1, 0, 0, 0,  sizeof(samsung_panel_height), samsung_panel_height},
         {DTYPE_DCS_WRITE1, 1, 0, 0, 0,  sizeof(samsung_panel_vinit), samsung_panel_vinit},
-        {DTYPE_DCS_WRITE, 1, 0, 0, 0,   sizeof(display_on), display_on},
+        {DTYPE_DCS_WRITE, 1, 0, 0, 30,   sizeof(display_on), display_on},
 };
 
 
@@ -188,7 +188,7 @@ static struct dsi_cmd_desc auo_cmd_on_cmds[] = {
         {DTYPE_DCS_WRITE1, 1, 0, 0, 0,  sizeof(hori_flip_cmd), hori_flip_cmd},
         {DTYPE_DCS_WRITE1, 1, 0, 0, 0,  sizeof(turn_on_peri_cmd), turn_on_peri_cmd},
         {DTYPE_DCS_WRITE1, 1, 0, 0, 300,sizeof(sleep_out_cmd), sleep_out_cmd},
-        {DTYPE_DCS_WRITE, 1, 0, 0, 0,   sizeof(auo_display_on_cmd), auo_display_on_cmd},
+        {DTYPE_DCS_WRITE, 1, 0, 0, 30,   sizeof(auo_display_on_cmd), auo_display_on_cmd},
 };
 
 static struct dsi_cmd_desc auo_display_off_cmds[] = {
@@ -764,10 +764,10 @@ static int mipi_cmd_samsung_blue_qhd_pt_init(void)
 	pinfo.bl_min = 1;
 	pinfo.fb_num = 2;
 	pinfo.lcd.blt_ctrl = 1;
-	pinfo.clk_rate = 440000000;
+	pinfo.clk_rate = 400000000;
 	pinfo.lcd.vsync_enable = TRUE;
 	pinfo.lcd.hw_vsync_mode = TRUE;
-	pinfo.lcd.refx100 = 6050; /*6096 adjust refx100 to prevent tearing */
+	pinfo.lcd.refx100 = 5600; /*6096 adjust refx100 to prevent tearing */
 
 
 	pinfo.mipi.mode = DSI_CMD_MODE;
