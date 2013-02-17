@@ -2391,6 +2391,12 @@ config ACPU_MAX_FREQ
 	  If set to non-zero number, will search for this frequency in
           frequency table and set as maximum supported frequency if found.
 
+config UNDERVOLT
+	bool "Undervolt"
+	default n
+	help
+	  adds undervolt by default to all freq.
+
 config CMDLINE_OPTIONS
 	bool "Enable cmdline khz/gov/maxscroff command parsing"
 	default y
@@ -2419,6 +2425,13 @@ config ANDROID_RAM_CONSOLE_APPEND_PMIC_STATUS_BITS
 	help
 	  Append PMIC status bits to end of /proc/last_kmsg for
 	  checking the boot / reset reason in detail
+
+config FORCE_FAST_CHARGE
+	bool "Force AC charge mode at will"  
+	default y
+	help
+  	  A simple sysfs interface to force adapters that
+	  are detected as USB to charge as AC.
 
 config MSM_USE_USER_ACCESSIBLE_TIMERS
 	bool "Enables mapping an MSM timer counter page to user space."

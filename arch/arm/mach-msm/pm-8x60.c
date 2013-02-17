@@ -1332,6 +1332,7 @@ static int msm_pm_enter(suspend_state_t state)
 						gpio_sleep_status_info);
 
 	}
+
 	if (MSM_PM_DEBUG_VREG & msm_pm_debug_mask) {
 		curr_len = 0;
 		if (vreg_sleep_status_info) {
@@ -1342,10 +1343,11 @@ static int msm_pm_enter(suspend_state_t state)
 			if (!vreg_sleep_status_info) {
 				pr_err("kmalloc memory failed in %s\n",
 					__func__);
-
 			}
 		}
+#ifdef CONFIG_MFD_PM8XXX_DEBUG
 		curr_len = pmic_vreg_dump(vreg_sleep_status_info, curr_len);
+#endif
 	}
 
 	if (smp_processor_id()) {

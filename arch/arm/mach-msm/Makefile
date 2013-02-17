@@ -97,7 +97,7 @@ obj-$(CONFIG_MSM_IPC_LOGGING) += ipc_logging.o
 ifdef CONFIG_DEBUG_FS
 obj-$(CONFIG_MSM_IPC_LOGGING) += ipc_logging_debug.o
 endif
-obj-$(CONFIG_MSM_SMD) += smd.o smd_debug.o remote_spinlock.o
+obj-$(CONFIG_MSM_SMD) += smd.o remote_spinlock.o
 obj-y += socinfo.o
 ifndef CONFIG_ARCH_MSM9615
 ifndef CONFIG_ARCH_APQ8064
@@ -239,7 +239,11 @@ obj-$(CONFIG_MACH_MSM7X25_SURF) += board-msm7x27.o devices-msm7x25.o
 obj-$(CONFIG_MACH_MSM7X25_FFA) += board-msm7x27.o devices-msm7x25.o
 obj-$(CONFIG_ARCH_MSM8960) += clock-local.o clock-dss-8960.o clock-8960.o clock-rpm.o
 obj-$(CONFIG_ARCH_MSM8960) += devices-8960.o footswitch-8x60.o
+ifdef CONFIG_UNDERVOLT
+obj-$(CONFIG_ARCH_MSM8960) += acpuclock-8960-uV.o
+else
 obj-$(CONFIG_ARCH_MSM8960) += acpuclock-8960.o
+endif
 obj-$(CONFIG_ARCH_MSM8960) += memory_topology.o
 obj-$(CONFIG_ARCH_MSM8960) += saw-regulator.o
 obj-$(CONFIG_MACH_MSM8960_SIM) += board-8960.o board-8960-regulator.o
@@ -281,6 +285,7 @@ obj-$(CONFIG_MACH_FIGHTER) += htc_bdaddress.o htc_util.o
 obj-$(CONFIG_MACH_JET) += board-jet.o board-jet-regulator.o board-jet-gpio.o board-jet-audio.o
 obj-$(CONFIG_MACH_JET) += board-jet-keypad.o
 obj-$(CONFIG_MACH_JET) += htc_bdaddress.o htc_util.o
+obj-$(CONFIG_FORCE_FAST_CHARGE) += fastchg.o
 
 obj-$(CONFIG_MACH_JEWEL_DD) += board-jel_dd.o board-jel_dd-regulator.o board-jel_dd-gpio.o 
 obj-$(CONFIG_MACH_JEWEL_DD) += board-jel_dd-keypad.o
