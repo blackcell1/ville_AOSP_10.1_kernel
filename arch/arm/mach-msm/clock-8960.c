@@ -3300,7 +3300,7 @@ static struct rcg_clk gfx2d0_clk = {
 	.c = {
 		.dbg_name = "gfx2d0_clk",
 		.ops = &clk_ops_rcg_8960,
-		VDD_DIG_FMAX_MAP3(LOW,  100000000, NOMINAL, 266667000,
+		VDD_DIG_FMAX_MAP3(LOW,  100000000, NOMINAL, 200000000,
 				  HIGH, 320000000),
 		CLK_INIT(gfx2d0_clk.c),
 	},
