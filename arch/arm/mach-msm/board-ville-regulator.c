@@ -473,13 +473,20 @@ struct platform_device msm8960_device_rpm_regulator __devinitdata = {
 		.platform_data = &msm_rpm_regulator_pdata,
 	},
 };
-
 /* SAW regulator constraints */
+#ifdef CONFIG_UNDERVOLT
+struct regulator_init_data msm_saw_regulator_pdata_s5 =
+	/*	      ID  vreg_name	       min_uV   max_uV */
+	SAW_VREG_INIT(S5, "8921_s5",	       700000, 1350000);
+struct regulator_init_data msm_saw_regulator_pdata_s6 =
+	SAW_VREG_INIT(S6, "8921_s6",	       700000, 1350000);
+#else
 struct regulator_init_data msm_saw_regulator_pdata_s5 =
 	/*	      ID  vreg_name	       min_uV   max_uV */
 	SAW_VREG_INIT(S5, "8921_s5",	       800000, 1350000);
 struct regulator_init_data msm_saw_regulator_pdata_s6 =
 	SAW_VREG_INIT(S6, "8921_s6",	       800000, 1350000);
+#endif //undervolt
 
 /* PM8921 regulator constraints */
 struct pm8xxx_regulator_platform_data
