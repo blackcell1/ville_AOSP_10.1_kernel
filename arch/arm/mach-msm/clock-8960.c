@@ -6017,3 +6017,4 @@ int is_xo_src(struct clk *clk)
 	if (cl)
 		cl->clk->flags |= CLKFLAG_IGNORE;
 }
+
