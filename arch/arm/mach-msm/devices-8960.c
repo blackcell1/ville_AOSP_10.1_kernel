@@ -2427,7 +2427,7 @@ static struct msm_bus_vectors grp3d_init_vectors[] = {
 	},
 };
 
-static struct msm_bus_vectors grp3d_nominal_low_vectors[] = {
+static struct msm_bus_vectors grp3d_low_vectors[] = {
 	{
 		.src = MSM_BUS_MASTER_GRAPHICS_3D,
 		.dst = MSM_BUS_SLAVE_EBI_CH0,
