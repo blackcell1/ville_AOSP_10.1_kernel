@@ -171,7 +171,7 @@ static void set_acpuclk_L2_freq_foot_print(unsigned khz)
 
 #define STBY_KHZ		1
 
-#define MAX_VDD_SC 1300000 /* uV */
+#define MAX_VDD_SC 1350000 /* uV */
 #define MIN_VDD_SC 800000 /* uV */
 
 #define HFPLL_NOMINAL_VDD 1050000
@@ -691,7 +691,7 @@ static struct acpu_level acpu_freq_tbl_8960_kraitv2_fast[] = {
 	{ 1, {  1890000, HFPLL, 1, 0, 0x40 }, L2(19), 1275000 },
 #ifndef CONFIG_MSM_CPU_MAX_CLK_1DOT89GHZ
 	{ 1, {  1998000, HFPLL, 1, 0, 0x42 }, L2(19), 1300000 },
-	{ 1, { 2106000,  HFPLL, 1, 0, 0x44 }, L2(19), 1325000 },
+	{ 1, {  2106000, HFPLL, 1, 0, 0x44 }, L2(19), 1325000 },
 #endif
 #endif
 #endif

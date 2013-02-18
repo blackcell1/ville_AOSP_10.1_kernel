@@ -2623,12 +2623,12 @@ static struct kgsl_device_platform_data kgsl_3d0_pdata = {
 		{
 			 .gpu_freq = 512000000,
                          .bus_freq = 4,
-                         .io_fraction = 33,
+                         .io_fraction = 0,
                  },
                  {
 			.gpu_freq = 400000000,
 			.bus_freq = 3,
-			.io_fraction = 50,
+			.io_fraction = 33,
 		 },
 		 {
 			.gpu_freq = 300000000,
@@ -3264,4 +3264,5 @@ struct platform_device msm8960_iommu_domain_device = {
 		.platform_data = &msm8960_iommu_domain_pdata,
 	},
 };
+
 
