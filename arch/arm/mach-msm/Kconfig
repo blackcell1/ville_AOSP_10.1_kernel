@@ -2391,6 +2391,12 @@ config ACPU_MAX_FREQ
 	  If set to non-zero number, will search for this frequency in
           frequency table and set as maximum supported frequency if found.
 
+config OVERVOLT
+	bool "Overvolt"
+	default n
+	help
+	  Add overvolt for stability issues.
+
 config CMDLINE_OPTIONS
 	bool "Enable cmdline khz/gov/maxscroff command parsing"
 	default y
