@@ -2396,7 +2396,17 @@ config OVERVOLT
 	default n
 	help
 	  Add overvolt for stability issues.
+choice
+prompt "Overclock"
+	default OVERVOLT850000
+	depends on OVERVOLT
+config OVERVOLT850000
+	bool "OVERVOLT 850000 uV"
 
+config OVERVOLT950000
+	bool "OVERVOLT 950000 uV"
+
+endchoice
 config CMDLINE_OPTIONS
 	bool "Enable cmdline khz/gov/maxscroff command parsing"
 	default y
