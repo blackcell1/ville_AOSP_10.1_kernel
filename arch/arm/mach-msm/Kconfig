@@ -2398,13 +2398,16 @@ config OVERVOLT
 	  Add overvolt for stability issues.
 choice
 prompt "Overclock"
-	default OVERVOLT850000
+	default OVERVOLT_SOFT
 	depends on OVERVOLT
-config OVERVOLT850000
-	bool "OVERVOLT 850000 uV"
+config OVERVOLT_SOFT
+	bool "OVERVOLT SOFT"
 
-config OVERVOLT950000
-	bool "OVERVOLT 950000 uV"
+config OVERVOLT_MEDIUM
+	bool "OVERVOLT MEDIUM"
+
+config OVERVOLT_HARD
+	bool "OVERVOLT HARD"
 
 endchoice
 config CMDLINE_OPTIONS
