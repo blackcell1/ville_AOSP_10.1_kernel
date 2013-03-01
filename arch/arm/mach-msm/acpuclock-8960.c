@@ -380,9 +380,9 @@ static struct l2_level l2_freq_tbl_8960_kraitv2[] = {
 #define OV_GAP 50000
 #else /*OVERVOLT_SOFT*/
 #ifdef CONFIG_OVERVOLT_MEDIUM
-#define OV_GAP 100000
+#define OV_GAP 75000
 #else /*OVERVOLT_MEDIUM*/
-#define OV_GAP 125000
+#define OV_GAP 100000
 #endif/*OVERVOLT_MEDIUM*/
 #endif /*OVERVOLT_SOFT*/
 #endif /*OVERVOLT*/
