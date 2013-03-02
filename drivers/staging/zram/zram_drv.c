@@ -775,7 +775,7 @@ static int create_device(struct zram *zram, int device_id)
 		goto out;
 	}
 
-	blk_queue_make_request(zram->queue, (make_request_fn *)zram_make_request);
+	blk_queue_make_request(zram->queue, zram_make_request);
 	zram->queue->queuedata = zram;
 
 	 /* gendisk structure */
@@ -922,3 +922,4 @@ module_exit(zram_exit);
 MODULE_LICENSE("Dual BSD/GPL");
 MODULE_AUTHOR("Nitin Gupta <ngupta@vflare.org>");
 MODULE_DESCRIPTION("Compressed RAM Block Device");
+
