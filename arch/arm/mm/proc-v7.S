@@ -548,7 +548,7 @@ __v7_ca9mp_proc_info:
 __v7_ca15mp_proc_info:
 	.long   0x410fc0f0
 	.long   0xff0ffff0
-	__v7_proc __v7_ca15mp_setup, hwcaps = HWCAP_IDIV
+	__v7_proc __v7_ca15mp_setup, HWCAP_VFPv4 | HWCAP_IDIV//hwcaps = HWCAP_IDIV
 	.size   __v7_ca15mp_proc_info, . - __v7_ca15mp_proc_info
 
 	/*

@@ -7,7 +7,7 @@
 # ccflags-y := -DDEBUG
 # asflags-y := -DDEBUG
 
-KBUILD_AFLAGS  :=$(KBUILD_AFLAGS:-msoft-float=-Wa,-march=armv7-a -mfpu=neon)
+KBUILD_AFLAGS  :=$(KBUILD_AFLAGS:-msoft-float=-Wa,-mfpu=neon-vfpv4 -ftree-vectorize -funsafe-math-optimizations)
 LDFLAGS		+=--no-warn-mismatch
 
 obj-y			+= vfp.o
