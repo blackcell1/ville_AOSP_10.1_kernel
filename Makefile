@@ -362,7 +362,7 @@ MODFLAGS	= -DMODULE -fgcse-lm -fgcse-sm -fsched-spec-load -fforce-addr -ffast-ma
 CFLAGS_MODULE   = $(MODFLAGS)
 AFLAGS_MODULE   = $(MODFLAGS)
 LDFLAGS_MODULE  = -T $(srctree)/scripts/module-common.lds
-CFLAGS_KERNEL	= -fgcse-lm -fgcse-sm -fsched-spec-load -fforce-addr -ffast-math  -fsingle-precision-constant -mtune=cortex-a15 -marm -march=armv7-a -mfpu=neon-vfpv4 -ftree-vectorize -mvectorize-with-neon-quad -funroll-loops-mvectorize-with-neon-quad
+CFLAGS_KERNEL	= -fgcse-lm -fgcse-sm -fsched-spec-load -fforce-addr -ffast-math  -fsingle-precision-constant -mtune=cortex-a15 -marm -march=armv7-a -mfpu=neon-vfpv4 -ftree-vectorize -mvectorize-with-neon-quad -funroll-loops -mvectorize-with-neon-quad
 AFLAGS_KERNEL 	= -fgcse -fsingle-precision-constant -mtune=cortex-a15 -march=armv7-a -mfpu=neon-vfpv4 -ftree-vectorize
 CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage
 
