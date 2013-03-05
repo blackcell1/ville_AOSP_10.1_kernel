@@ -108,7 +108,7 @@ endif
 
 targets       := vmlinux vmlinux.lds \
 		 piggy.$(suffix_y) piggy.$(suffix_y).o \
-		 lib1funcs.o lib1funcs.S font.o font.c head.o misc.o $(OBJS)
+		 lib1funcs.o lib1funcs.S font.o font.c head.o misc.o decompress.o $(OBJS)
 
 # Make sure files are removed during clean
 extra-y       += piggy.gzip piggy.lzo piggy.lzma piggy.xzkern lib1funcs.S ashldi3.S $(libfdt) $(libfdt_hdrs)
@@ -172,6 +172,10 @@ $(obj)/vmlinux: $(obj)/vmlinux.lds $(obj)/$(HEAD) $(obj)/piggy.$(suffix_y).o \
 		$(addprefix $(obj)/, $(OBJS)) $(lib1funcs) $(ashldi3) FORCE
 	$(call if_changed,ld)
 	@$(check_for_bad_syms)
+#$(obj)/vmlinux: $(obj)/vmlinux.lds $(obj)/$(HEAD) $(obj)/$(MISC) $(obj)/$(DECOMPRESS) $(obj)/#piggy.$(suffix_y).o \
+#		$(addprefix $(obj)/, $(OBJS)) $(lib1funcs) $(ashldi3) FORCE
+#	$(call if_changed,ld)
+#	@$(check_for_bad_syms)
 
 $(obj)/piggy.$(suffix_y): $(obj)/../Image FORCE
 	$(call if_changed,$(suffix_y))
