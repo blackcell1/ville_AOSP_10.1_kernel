@@ -1405,11 +1405,9 @@ static int msm_pm_enter(suspend_state_t state)
 #ifdef CONFIG_MSM_IDLE_STATS
 				xo_shutdown_time = msm_rpm_get_xo_time();
 				vdd_min_time = msm_rpm_get_vdd_time();
-#endif
 				collapsed = msm_pm_power_collapse(false);
 				msm_rpmrs_exit_sleep(rs_limits, false, true,
 						collapsed);
-#ifdef CONFIG_MSM_IDLE_STATS
 				xo_shutdown_time = msm_rpm_get_xo_time() - xo_shutdown_time;
 				if (xo_shutdown_time > 0)
 					msm_pm_add_stat(MSM_PM_STAT_SUSPEND_XO_SHUTDOWN, xo_shutdown_time);

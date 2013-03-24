@@ -995,7 +995,7 @@ static int get_battery_uvolts(struct pm8921_bms_chip *chip, int *uvolts)
 
 static int adc_based_ocv(struct pm8921_bms_chip *chip, int *ocv)
 {
-	int vbatt, rbatt, ibatt_ua, rc;
+	int vbatt = 0, rbatt, ibatt_ua, rc;
 	struct pm8921_soc_params raw;
 
 	rc = get_battery_uvolts(chip, &vbatt);
@@ -2477,7 +2477,7 @@ restore_sbi_config:
 static int __devinit pm8921_bms_probe(struct platform_device *pdev)
 {
 	int rc = 0;
-	int vbatt;
+	int vbatt = 0;
 	struct pm8921_bms_chip *chip;
 	const struct pm8921_bms_platform_data *pdata
 				= pdev->dev.platform_data;
